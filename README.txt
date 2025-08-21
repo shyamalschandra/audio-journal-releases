@@ -137,9 +137,9 @@ swift build -c release --product audio-journal-cli
 3. Update Homebrew tap formulas
 4. Create GitHub release with notes
 
-## 📄 License
+## 📄 Copyright
 
-MIT License - Copyright (c) 2025 Shyamal Suhana Chandra
+Copyright (C) 2025, Shyamal Suhana Chandra - All rights reserved.
 
 ## 🔗 Links
 
