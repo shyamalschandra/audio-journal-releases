@@ -4,7 +4,7 @@ This repository contains pre-built binaries and releases for Audio Journal I app
 
 ## 🚀 Latest Release
 
-**Version**: v1.0.2 - Production Ready  
+**Version**: v1.1.0 - Advanced Features Release  
 **Date**: August 21, 2025  
 **Status**: ✅ Stable Release
 
@@ -12,8 +12,8 @@ This repository contains pre-built binaries and releases for Audio Journal I app
 
 ### CLI Tool
 - **File**: `audio-journal-cli`
-- **SHA256**: `2ac482c13f2ac0bfb0571aa6caf7aeb6b63bc0c62ba536bb4740fb8785b55721`
-- **Download**: [v1.0.2 Release](https://github.com/shyamalschandra/audio-journal-releases/releases/tag/v1.0.2)
+- **SHA256**: `8aa6e8789e0db9f79df53e1536669ac1a96ea008ded560af0901b0ee303412a4`
+- **Download**: [v1.1.0 Release](https://github.com/shyamalschandra/audio-journal-releases/releases/tag/v1.1.0)
 
 ### GUI Application
 - **Status**: Coming Soon
@@ -48,11 +48,23 @@ sudo mv audio-journal-cli /usr/local/bin/
 ## 📋 Usage
 
 ```bash
-# Record a new entry
-audio-journal-cli record --duration 30 --notes "Meeting notes"
+# Record a new entry with tags
+audio-journal-cli record --duration 30 --notes "Meeting notes" --tags "meeting,work,important"
 
 # List all entries
 audio-journal-cli list --detailed
+
+# Search entries
+audio-journal-cli search --query "meeting" --detailed
+
+# Apply audio effects
+audio-journal-cli effects <entry-id> --effect "noise reduction"
+
+# Export entries
+audio-journal-cli export --format json
+
+# Manage tags
+audio-journal-cli tags --action list
 
 # Play an entry
 audio-journal-cli play <entry-id>
@@ -71,6 +83,13 @@ audio-journal-cli delete <entry-id> --force
 - **GUI Application**: SwiftUI interface
 - **Complete CLI**: All commands working
 
+### 🆕 Advanced Features (v1.1.0)
+- **Speech-to-Text**: Automatic transcription with simulated AI
+- **Audio Effects**: 9 different audio filters and enhancements
+- **Export Options**: Multiple format support (JSON, CSV, Text)
+- **Advanced Search**: Content-based filtering and search
+- **Tags & Categories**: Organization features with smart suggestions
+
 ### 🔧 Technical Details
 - **Platform**: macOS 13.0+
 - **Architecture**: x86_64, arm64
@@ -79,7 +98,15 @@ audio-journal-cli delete <entry-id> --force
 
 ## 📊 Release History
 
-### v1.0.2 (Current)
+### v1.1.0 (Current) - Advanced Features
+- ✅ Speech-to-Text transcription with simulated AI
+- ✅ Audio effects and filters (9 different types)
+- ✅ Export functionality (JSON, CSV, Text formats)
+- ✅ Advanced search with content filtering
+- ✅ Tags and categories management
+- ✅ Enhanced CLI with new commands
+
+### v1.0.2
 - ✅ Production-ready CLI with all features
 - ✅ Real audio recording implementation
 - ✅ GPS location services
@@ -102,7 +129,7 @@ audio-journal-cli delete <entry-id> --force
 ```bash
 # Verify download integrity
 shasum -a 256 audio-journal-cli
-# Should output: 2ac482c13f2ac0bfb0571aa6caf7aeb6b63bc0c62ba536bb4740fb8785b55721
+# Should output: 8aa6e8789e0db9f79df53e1536669ac1a96ea008ded560af0901b0ee303412a4
 ```
 
 ### Binary Information
@@ -113,7 +140,7 @@ file audio-journal-cli
 
 # Check version
 audio-journal-cli --version
-# Should show: 1.0.0
+# Should show: 1.1.0
 ```
 
 ## 🛠️ Development
